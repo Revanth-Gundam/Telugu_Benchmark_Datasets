@@ -99,4 +99,4 @@ Evaluates model alignment with human ethical perspectives across four sub-domain
 ---
 
 ## Usage for Inference
-These datasets support evaluation in both native Telugu script and phonetic Romanized forms. Romanized fields use only standard English alphabets (a-z, A-Z) with no accents or diacritics to ensure maximum compatibility across different tokenizers.
+These datasets support evaluation in both native Telugu script and phonetic Romanized forms. Romanized fields use only standard English alphabets (a-z, A-Z) with no accents or diacritics to ensure maximum compatibility across the different tokenizers.
