@@ -20,9 +20,9 @@ A collection of grade-school math word problems requiring multi-step reasoning.
   - `sample_id`: Unique identifier (e.g., "GSM_TE_001").
   - `original_question`: The original problem in English.
   - `telugu_question`: The translated problem in Telugu script.
-  - `romanized_telugu_question`: Clean phonetic transliteration using standard English alphabets.
+  - `romanized_telugu_question`: Phonetic transliteration using standard English alphabets.
   - `final_answer`: The final numerical result.
-  - `difficulty`: Complexity level ("easy" or "medium").
+  - `difficulty`: Complexity level ("easy", "medium" or "hard).
 
 ---
 
@@ -35,7 +35,7 @@ A benchmark for common-sense reasoning focusing on pronoun resolution and lingui
   - `sample_id`: Unique identifier.
   - `eng_sent` / `eng_op1` / `eng_op2`: Original English sentence and choices.
   - `tel_sent` / `tel_op1` / `tel_op2`: Telugu translation of the sentence and options.
-  - `romanized_tel_sent` / `romanized_tel_op1` / `romanized_tel_op2`: Clean phonetic transliteration.
+  - `romanized_tel_sent` / `romanized_tel_op1` / `romanized_tel_op2`: Phonetic transliteration.
   - `answer`: The correct option index ("1" or "2").
 
 ---
@@ -47,11 +47,11 @@ Science-based multiple-choice questions designed to test knowledge-based reasoni
 
 - **Fields:**
   - `sample_id`: Unique identifier.
-  - `difficulty`: Difficulty level (e.g., "easy").
+  - `difficulty`: Difficulty level ("easy" or "hard).
   - `original_question` / `original_choices`: Original English science question and options.
   - `telugu_question` / `telugu_choices`: Telugu translation of the question and options.
-  - `romanized_telugu_question` / `romanized_telugu_choices`: Clean phonetic transliteration.
-  - `answer_key`: The correct alphabetical choice (e.g., "A", "B", "C", "D").
+  - `romanized_telugu_question` / `romanized_telugu_choices`: Phonetic transliteration.
+  - `answer_key`: The correct alphabetical choice (e.g., "A", "B", "C", "D" or "1", "2", "3", "4").
 
 ---
 
@@ -64,7 +64,7 @@ Legal reasoning tasks requiring identification of the correct legal holding base
   - `sample_id`: Unique identifier.
   - `original_citation_prompt` / `original_holdings`: Original English legal context and holdings.
   - `telugu_prompt` / `telugu_holdings`: Telugu translation of the legal prompt and options.
-  - `romanized_telugu_prompt` / `romanized_telugu_holdings`: Clean phonetic transliteration.
+  - `romanized_telugu_prompt` / `romanized_telugu_holdings`: Phonetic transliteration.
   - `correct_label`: Index of the correct holding (0 through 4).
 
 ---
@@ -82,19 +82,19 @@ Evaluates model alignment with human ethical perspectives across four sub-domain
 - **Label 0**: Action is **acceptable** or neutral.
 
 #### **B. Deontology**
-- **Fields:** `original_input` (scenario, excuse), `tel_input` (tel_scenario, tel_excuse), `romanized_tel_input`, `label`.
+- **Fields:** `original_input` (scenario, excuse), `tel_input` (tel_scenario, tel_excuse), `romanized_tel_input` (romanized_tel_scenario, romanized_tel_excuse), `label`.
 - **Label 1**: The **excuse is reasonable**/justified for the given scenario.
 - **Label 0**: The **excuse is unreasonable**/unjustified.
 
 #### **C. Justice**
 - **Fields:** `original_scenario`, `tel_scenario`, `romanized_tel_scenario`, `label`.
-- **Label 1**: Scenario describes an **unjust** situation or violation of fairness.
-- **Label 0**: Scenario describes a **just** or fair situation.
+- **Label 1**: Scenario describes a **just** or fair situation.
+- **Label 0**: Scenario describes an **unjust** situation or violation of fairness.
 
 #### **D. Utilitarianism**
-- **Fields:** `original_input` (baseline, less_pleasant), `tel_input`, `romanized_tel_input`, `label`.
-- **Label 1**: The `less_pleasant` scenario is indeed **worse/less desirable** than the `baseline`.
-- **Label 0**: The comparison is neutral or the outcome does not differ significantly.
+- **Fields:** `original_input` (baseline, less_pleasant), `tel_input` (tel_baseline, tel_less_pleasant), `romanized_tel_input` (romanized_tel_baseline, romanized_tel_less_pleasant).
+- The `less_pleasant` scenario is indeed **worse/less desirable** than the `baseline`.
+
 
 ---
 
